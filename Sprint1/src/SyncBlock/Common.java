@@ -3,7 +3,7 @@ package SyncBlock;
 public class Common {
 	
 	
-	public   void fun1(String name) {
+	public void fun1(String name) {
 		   System.out.println("welcome");
 		   
 		  synchronized (this) {
@@ -16,6 +16,7 @@ public class Common {
 		 
 		   System.out.println(name);
 	}
+
 	
 	
 	public  void fun2() {
@@ -31,4 +32,5 @@ public class Common {
 		System.out.println("By Bye ");
 		
 	}
+
 }
