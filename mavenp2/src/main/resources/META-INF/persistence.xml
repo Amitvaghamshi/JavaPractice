@@ -12,6 +12,8 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
  <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/first_database" />
  <property name="javax.persistence.jdbc.user" value="root" />
  <property name="javax.persistence.jdbc.password" value="5645" />
+ <property name="hibernate.show_sql" value="true"/>
+  <property name="hibernate.hbm2ddl.auto" value="update"/>
 
  </properties>
  </persistence-unit>
