@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="d1" class="com.masai.Demo" autowire="constructor"/>
+
+	<bean id="a6" class="com.masai.A" init-method="funA" destroy-method="distroy" />
+
+	<bean id="a5" class="com.masai.A" />
+
+	<bean id="b5" class="com.masai.B" scope="prototype">
+		<property name="msg" value="Welcome to Spring.."/>
+	</bean>
+	
+	
+	<bean id="mp" class="com.masai.Ops">
+	
+	<property name="name" value="amit"></property>
+	<property name="map">
+	   <map>
+	     <entry key-ref="a5" value="10"></entry>
+	     <entry key-ref="a6" value="20"></entry>
+	   
+	   </map>
+	</property>
+	
+	</bean>
+    
+ 
+</beans>
