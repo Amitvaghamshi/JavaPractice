@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <!-- more bean definitions go here -->
+    
+    
+    
+    <bean id="d" class="com.masai.Department">
+         
+           <property name="dname" value="CIvil"></property>
+           <property name="did" value="1"></property>
+           <property name="location" value="surat"></property>
+    </bean>
+    
+    
+    
+    <bean id="d2" class="com.masai.Department">
+         
+           <property name="dname" value="CIvil"></property>
+           <property name="did" value="1"></property>
+           <property name="location" value="surat"></property>
+    </bean>
+    
+    
+    
+    <bean id="e1" class="com.masai.Employee" lazy-init="true" init-method="init" destroy-method="distroy">
+         
+           <property name="name" value="amit"></property>
+           <property name="dname" ref="d"></property>
+           <property name="location" value="dhari"></property>
+           <property name="lis"> 
+             
+               <set>
+                   <ref bean="d"/>
+                    <ref bean="d2"/>
+                    
+               </set>
+               
+           
+           </property>
+    </bean>
+    
+    
+     <bean id="e2" class="com.masai.Employee">
+         
+           <property name="name" value="ashish"></property>
+           <property name="dname" ref="d"></property>
+           <property name="location" value="dangavadar"></property>
+    </bean>
+
+</beans>
