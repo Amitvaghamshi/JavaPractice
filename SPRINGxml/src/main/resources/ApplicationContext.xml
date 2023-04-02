@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
@@ -9,14 +7,14 @@
        
 
     <bean id="sts" class="com.practice.Student"> 
-     <constructor-arg value="234"/>
+      <constructor-arg value="234"/>
       <constructor-arg value="kelo" />
      
     
      </bean>
      
      
-      <bean id="aa" class="circuler.A" init-method="cre" destroy-method="" lazy-init="true" scope="prototype"> 
+      <!-- <bean id="aa" class="circuler.A" init-method="cre" destroy-method="" lazy-init="true" scope="prototype"> 
             <constructor-arg value="amit"/>
             <constructor-arg ref="bb"/>
       </bean>
@@ -25,6 +23,31 @@
         <constructor-arg value="amit"></constructor-arg>
         <constructor-arg ref="aa"></constructor-arg>
       </bean>
+      -->
+      
+      <bean id="d" class="database.Dao"></bean>
+      
+      <bean id="service" class="database.Service" >
+              <property name="dao" ref="d"></property>
+      </bean>
+      
+      
+      
+      <bean id="p" class="database.Present" autowire="constructor">        
+       </bean>
     
+    
+    
+    <bean id="add" class="database.Address">
+       <property name="state" value="gujrat"></property>
+       <property name="city" value="amreli"></property>
+       <property name="pin" value="365640"></property>
+    </bean>
+ 
+     <bean id="stu" class="database.Student"> 
+        <property name="id" value="1"></property>
+        <property name="name" value="pablo"></property>
+        <property name="add" ref="add"></property>
+     </bean>
  
 </beans>

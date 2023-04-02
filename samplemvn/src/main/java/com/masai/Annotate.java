@@ -1,0 +1,15 @@
+package com.masai;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class Annotate {
+
+	public static void main(String[] args) {
+		
+		 for(int i=0;i<10;i++) {
+			 System.out.println(i);
+		 }
+		
+	}
+}

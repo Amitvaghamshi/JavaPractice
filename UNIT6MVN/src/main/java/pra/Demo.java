@@ -1,6 +1,8 @@
 package pra;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.hibernate.boot.jaxb.mapping.NamedQuery;
 
@@ -14,7 +16,7 @@ public class Demo {
 	public static void main(String[] args) {
 		
 		
-		EntityManager em=EMUtil.provideEntityManager();
+	//	EntityManager em=EMUtil.provideEntityManager();
 		
 //		Student s=new Student(0,253, "khajur");
 //		
@@ -39,10 +41,35 @@ public class Demo {
 		
 		//System.out.println(st);
 		
-		Query q=em.createNamedQuery("native");
-		List<Student> lis=q.getResultList();
-		System.out.println(lis);
+//		Query q=em.createNamedQuery("native");
+//		List<Student> lis=q.getResultList();
+//		System.out.println(lis);
+//		
+//		em.close();
 		
-		em.close();
+		
+//		String str="asdfgsdfgee";
+//	    boolean s=str.contains("fgee");
+//	    System.out.println(s);
+//	    
+//	    int[] arr=new int[23];
+//	    arr[0]=1;
+//	    arr[1]=1;
+//	    
+//	     String.join("-", "ef");
+		
+//		String.join("-", arr);
+		
+	    String str="12";
+	    String str2="182";
+	    StringBuilder sb=new StringBuilder("12");
+	    StringBuilder sb1=new StringBuilder("12");
+	    
+	    
+	    
+	    
+	    
+	    
+	    System.out.println(str.equals(str2));
 	}
 }
