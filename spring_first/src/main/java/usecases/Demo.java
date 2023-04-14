@@ -13,7 +13,6 @@ public class Demo {
 		
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("ApplicationContext.xml");
 		
-		
 		Journy j=ctx.getBean(Journy.class,"j");
 		j.journy();
 		System.out.println(j.getDays());
