@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="s1" class="Student" init-method="init" destroy-method="distroy" autowire="byType"  lazy-init="true" >
+          <property name="name" value="Amit"></property>
+          <property name="marks" value="7453"></property>
+          <property name="addr" value="Amreli"></property>
+    </bean>
+    
+    
+    <bean id="scho" class="School" >
+          <constructor-arg name="name" value="SOS"/>
+          <constructor-arg name="id" value="1"/>
+          
+          
+          <property name="names">
+              <list>
+                   <value>amit</value>
+                   <value>ashish</value>
+                   
+              </list>
+              
+              
+           </property>
+           
+          
+    </bean>   
+    
+    
+      <bean id="a" class="ciculerdependency.A">
+       <property name= "b" ref="b"></property>
+      </bean>
+      
+       <bean id="b" class="ciculerdependency.B">
+       <constructor-arg name="a" ref="a"></constructor-arg>
+      </bean>
+ 
+</beans>
