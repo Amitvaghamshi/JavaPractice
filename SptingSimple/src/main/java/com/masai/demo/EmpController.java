@@ -21,8 +21,6 @@ public class EmpController {
 	@PostMapping("/emp")
 	public ResponseEntity<Employee> AddEmp(@RequestBody Employee e) {
 		
-		   
-		
 		  Employee es=empservice.AddEmp(e);
 		  return new ResponseEntity<Employee>(es,HttpStatus.CREATED);
 	}
