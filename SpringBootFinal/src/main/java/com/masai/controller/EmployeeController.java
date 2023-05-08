@@ -18,6 +18,7 @@ import com.masai.model.Employee;
 import com.masai.service.EmployeeServiceImpl;
 
 @RestController
+
 public class EmployeeController {
 
 	   @Autowired
@@ -43,7 +44,9 @@ public class EmployeeController {
 		   
 		   System.out.println();
 		   return name+" "+roll;
+		   
 	   }
+
 	   
 	   @ExceptionHandler(IllegalArgumentException.class)
 		public ResponseEntity<String> myExpHandler(IllegalArgumentException ie)  {
