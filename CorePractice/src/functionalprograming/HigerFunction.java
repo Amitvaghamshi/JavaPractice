@@ -3,6 +3,7 @@ package functionalprograming;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class HigerFunction {
 	
@@ -33,9 +34,10 @@ public class HigerFunction {
 		System.out.println(lis);
 		
 	    lis.forEach(System.out::println);
+	    List<String> list= lis.stream().map(a->"Hello world "+a).collect(Collectors.toList());
+	    System.out.println(list);
+		
 	    
-		
-		
+	    
 	}
-
 }
